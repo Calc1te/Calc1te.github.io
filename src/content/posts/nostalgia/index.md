@@ -5,7 +5,7 @@ description: "其实我从来没用过3.5英寸软盘"
 image: "./cover.png"
 tags: ['怀旧', '表达练习']
 category: 呓语
-draft: true
+draft: false
 ---
 
 ```
