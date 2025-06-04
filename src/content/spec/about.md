@@ -1,9 +1,18 @@
 # About
-This is the demo site for [Fuwari](https://github.com/saicaca/fuwari).
 
-::github{repo="saicaca/fuwari"}
+**Calc1te**
 
-> ### Sources of images used in this site
-> - [Unsplash](https://unsplash.com/)
-> - [星と少女](https://www.pixiv.net/artworks/108916539) by [Stella](https://www.pixiv.net/users/93273965)
-> - [Rabbit - v1.4 Showcase](https://civitai.com/posts/586908) by [Rabbit_YourMajesty](https://civitai.com/user/Rabbit_YourMajesty)
+一无所长的大学生 (但是能让别人以为我啥都会干) /
+兴趣使然的翻译者 (文法水平尚未超过LLM) /
+毫无天赋的创作者 (灵感从未真正变成产出)
+
+## 关于这个“某个地方”
+
+这个网站建立的初衷是堆放我无处倾倒的牢骚，凭空一现的灵感，以及一些招人恨的想法。
+
+可能还有一些学习的笔记，大概吧
+
+**作者不对此博客发表的任何内容负责，如果你认为被冒犯了，那么是你自己的问题**
+**所有凭空消失的文章都不是我删除的，至少他们从未存在过**
+
+> 本博客的编写过程中没有任何ctrl+z受到伤害
