@@ -74,11 +74,6 @@ export const profileConfig: ProfileConfig = {
 			icon: "fa6-brands:bilibili",
 			url: "https://space.bilibili.com/35832407",
 		},
-		{
-			name: "Email",
-			icon: "fa6-brands:envelope",
-			url: "mailto:calcitevalentin@outlook.com",
-		},
 	],
 };
 
