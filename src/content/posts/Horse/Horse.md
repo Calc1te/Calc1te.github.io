@@ -2,7 +2,7 @@
 title: 老滩，或潮湿里的马
 published: 2025-07-12
 description: '当存在像湿沙子一样硌脚'
-image: '\horse-5.jpg'
+image: 'horse-5.jpg'
 tags: ['日常']
 category: 呓语
 draft: false 
