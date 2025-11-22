@@ -2,9 +2,9 @@
 title: 为什么会喜欢宝可梦呢
 published: 2025-11-22
 description: '由一些没来由的感伤引起的回忆'
-image: ''
+image: 'encounters.jpg'
 tags: ['怀旧']
-category: 'encounters.jpg'
+category: '呓语'
 draft: false 
 lang: ''
 ---
