@@ -2,7 +2,7 @@
 title: 冬至、12月
 published: 2025-12-20
 description: '但这世界未免太过温柔，对我这种不知好歹的小鬼未免太过仁慈'
-image: 'cow.jpg'
+image: 'sad.jpg'
 tags: ['酒后杂谈']
 category: '呓语'
 draft: false 
