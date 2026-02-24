@@ -1,6 +1,6 @@
 ---
 title: 如何假装输入
-published: 2026-2-24
+published: 2026-02-24
 description: '关于TIOCSTI，以及不安全的过时接口'
 image: ''
 tags: ['技术', 'OS']
