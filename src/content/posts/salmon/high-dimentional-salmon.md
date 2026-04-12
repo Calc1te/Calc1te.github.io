@@ -1,7 +1,7 @@
 ---
 title: 高维度鲑鱼
 published: 2026-04-12
-description: ''
+description: '点子文学其一'
 image: 'Salmo_salar.jpg'
 tags: [科幻]
 category: '写作'
