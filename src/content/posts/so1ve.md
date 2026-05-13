@@ -4,7 +4,7 @@ published: 2026-03-04
 description: '如何把一个实际问题翻译成一堆算法'
 image: ''
 tags: ['技术']
-category: ''
+category: 技术
 draft: false 
 lang: ''
 ---
