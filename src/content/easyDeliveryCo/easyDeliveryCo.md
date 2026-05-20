@@ -5,7 +5,7 @@ description: "Here's $5.33, take it or leave it. Btw gas price is 20$."
 image: 'EDC.jpg'
 tags: ['安利', '游戏']
 category: '安利'
-draft: true 
+draft: false
 lang: ''
 ---
 
