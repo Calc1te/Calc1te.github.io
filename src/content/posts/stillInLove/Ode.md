@@ -49,9 +49,9 @@ lang: ''
 
 下文我将进行粗略的，非常**粗略的**简化。因此，如果你想了解更多背景，我建议你去看看 Amelie Dorée 对《Moon.》和《雫》写下的评测，以及 Ontheones 撰写的关于这一题材的博文。
 
-<iframe width="100%" height="468" src="https://www.youtube.com/watch?v=YgXLfiJjmpo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="100%" height="468" src="https://www.youtube.com/embed/YgXLfiJjmpo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<iframe width="100%" height="468" src="https://www.youtube.com/watch?v=fQfxFULhPzU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="100%" height="468" src="https://www.youtube.com/embed/fQfxFULhPzU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ::link{url="https://ontheones.wordpress.com/2019/06/29/on-denpa-a-guest-article-by-kenji-the-engi/"}
 

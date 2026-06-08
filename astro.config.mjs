@@ -20,6 +20,7 @@ import { pluginLanguageBadge } from "./src/plugins/expressive-code/language-badg
 import { AdmonitionComponent } from "./src/plugins/rehype-component-admonition.mjs";
 import { GithubCardComponent } from "./src/plugins/rehype-component-github-card.mjs";
 import { LinkCardComponent } from "./src/plugins/rehype-component-link-card.mjs";
+import { rehypeLinkCardMetadata } from "./src/plugins/rehype-link-card-metadata.mjs";
 import { parseDirectiveNode } from "./src/plugins/remark-directive-rehype.js";
 import { remarkExcerpt } from "./src/plugins/remark-excerpt.js";
 import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
@@ -115,6 +116,7 @@ export default defineConfig({
 		rehypePlugins: [
 			rehypeKatex,
 			rehypeSlug,
+			rehypeLinkCardMetadata,
 			[
 				rehypeComponents,
 				{
