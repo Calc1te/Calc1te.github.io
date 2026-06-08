@@ -239,7 +239,91 @@ a.card-github.fetch-error
   100%
     opacity: 0.15
 
-.card-github, .gc-description, .gc-titlebar, .gc-stars, .gc-forks, .gc-license, .gc-avatar, .github-logo
+a.card-link
+  display: flex
+  flex-flow: row nowrap
+  gap: 1rem
+  background: var(--license-block-bg)
+  position: relative
+  margin: 0.5rem 0
+  padding: 1rem
+  color: var(--tw-prose-body)
+  border-radius: var(--radius-large)
+  text-decoration-thickness: 0px
+  text-decoration-line: none
+  align-items: flex-start
+
+  &:hover
+    background-color: var(--btn-regular-bg-hover)
+
+    .lc-title, .lc-domain
+      color: var(--tw-prose-headings)
+
+  &:active
+    scale: .98
+    background-color: var(--btn-regular-bg-active)
+
+  .lc-image
+    display: block
+    flex-shrink: 0
+    overflow: hidden
+    width: 4rem
+    height: 4rem
+    background-color: var(--primary)
+    background-size: cover
+    background-position: center
+    border-radius: 0.5rem
+
+  .lc-title
+    display: block
+    margin: 0 0 0.25rem 0
+    color: var(--tw-prose-headings)
+    font-size: 1rem
+    font-weight: 600
+    line-height: 1.4rem
+    word-break: break-word
+    overflow: hidden
+    display: -webkit-box
+    -webkit-line-clamp: 2
+    -webkit-box-orient: vertical
+
+  .lc-description
+    display: block
+    margin-bottom: 0.5rem
+    font-size: 0.875rem
+    font-weight: 300
+    line-height: 1.3rem
+    color: var(--tw-prose-body)
+    word-break: break-word
+    overflow: hidden
+    display: -webkit-box
+    -webkit-line-clamp: 2
+    -webkit-box-orient: vertical
+
+  .lc-domain
+    display: block
+    font-size: 0.75rem
+    color: var(--tw-prose-body)
+    opacity: 0.7
+    word-break: break-all
+
+a.card-link.fetch-waiting
+  pointer-events: none
+  opacity: 0.7
+  transition: opacity 0.15s ease-in-out
+
+  .lc-image, .lc-title, .lc-description, .lc-domain
+    background-color: var(--tw-prose-body)
+    color: transparent
+    opacity: 0.5
+    animation: pulsate 2s infinite linear
+    user-select: none
+
+a.card-link.fetch-error
+  pointer-events: all
+  opacity: 1
+
+.card-github, .gc-description, .gc-titlebar, .gc-stars, .gc-forks, .gc-license, .gc-avatar, .github-logo, .lc-image, .lc-title, .lc-description, .lc-domain
   transition-property: all
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
   transition-duration: 0.15s
