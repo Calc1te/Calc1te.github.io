@@ -4,7 +4,7 @@ published: 2026-06-09
 description: '本文章分级为PG-13'
 image: 'cover.webp'
 tags: ['译介','赛马娘','二次元']
-category: '翻译'
+category: '译介'
 draft: false 
 lang: ''
 ---
