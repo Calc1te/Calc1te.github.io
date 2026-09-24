@@ -10,6 +10,7 @@ import { getDir, getPostUrlBySlug } from "@utils/url-utils";
 import { Icon } from "astro-icon/components";
 import { licenseConfig } from "src/config";
 import PostMetadata from "../../components/PostMeta.astro";
+import PostEngagement from "../../components/PostEngagement.astro";
 import ImageWrapper from "../../components/misc/ImageWrapper.astro";
 import { profileConfig, siteConfig } from "../../config";
 import { formatDateToYYYYMMDD } from "../../utils/date-utils";
@@ -52,7 +53,7 @@ const jsonLd = {
             {}
         ]}>
             <!-- word count and reading time -->
-            <div class="flex flex-row text-black/30 dark:text-white/30 gap-5 mb-3 transition onload-animation">
+            <div class="flex flex-row flex-wrap text-black/30 dark:text-white/30 gap-x-5 gap-y-2 mb-3 transition onload-animation">
                 <div class="flex flex-row items-center">
                     <div class="transition h-6 w-6 rounded-md bg-black/5 dark:bg-white/10 text-black/50 dark:text-white/50 flex items-center justify-center mr-2">
                         <Icon name="material-symbols:notes-rounded"></Icon>
@@ -65,6 +66,7 @@ const jsonLd = {
                     </div>
                     <div class="text-sm">{remarkPluginFrontmatter.minutes} {" " + i18n(I18nKey.minutesCount)}</div>
                 </div>
+                <PostEngagement slug={entry.slug} />
             </div>
 
             <!-- title -->

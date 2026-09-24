@@ -509,6 +509,97 @@ window.onresize = () => {
 </script>
 
 <script>
+type EngagementResponse = {
+	views: number;
+	likes: number;
+	liked: boolean;
+};
+
+const engagementCount = new Intl.NumberFormat("zh-CN", {
+	notation: "compact",
+	maximumFractionDigits: 1,
+});
+
+function renderEngagement(
+	container: HTMLElement,
+	data: EngagementResponse,
+) {
+	const viewCount = container.querySelector<HTMLElement>("[data-view-count]");
+	const likeCount = container.querySelector<HTMLElement>("[data-like-count]");
+	const likeButton = container.querySelector<HTMLButtonElement>("[data-like-button]");
+
+	if (viewCount) viewCount.textContent = engagementCount.format(data.views);
+	if (likeCount) likeCount.textContent = engagementCount.format(data.likes);
+	if (likeButton) {
+		likeButton.setAttribute("aria-pressed", String(data.liked));
+		likeButton.setAttribute("aria-label", data.liked ? "取消点赞" : "点赞");
+	}
+}
+
+async function requestEngagement(
+	action: "view" | "like",
+	slug: string,
+): Promise<EngagementResponse> {
+	const response = await fetch(`/api/engagement/${action}`, {
+		method: "POST",
+		credentials: "same-origin",
+		headers: { "Content-Type": "application/json" },
+		body: JSON.stringify({ slug }),
+	});
+
+	if (!response.ok) {
+		throw new Error(`Engagement API returned ${response.status}`);
+	}
+	return response.json();
+}
+
+async function initPostEngagement() {
+	const container = document.querySelector<HTMLElement>("[data-post-engagement]");
+	if (!container || container.dataset.initialized === "true") return;
+
+	const slug = container.dataset.slug;
+	const likeButton = container.querySelector<HTMLButtonElement>("[data-like-button]");
+	if (!slug || !likeButton) return;
+
+	container.dataset.initialized = "true";
+	likeButton.disabled = true;
+
+	try {
+		renderEngagement(container, await requestEngagement("view", slug));
+		likeButton.disabled = false;
+	} catch (error) {
+		container.title = "阅读数据暂时不可用";
+		console.warn("Failed to load post engagement", error);
+		return;
+	}
+
+	likeButton.addEventListener("click", async () => {
+		likeButton.disabled = true;
+		try {
+			renderEngagement(container, await requestEngagement("like", slug));
+		} catch (error) {
+			container.title = "点赞失败，请稍后再试";
+			console.warn("Failed to update post like", error);
+		} finally {
+			likeButton.disabled = false;
+		}
+	});
+}
+
+initPostEngagement();
+
+const setupPostEngagement = () => {
+	window.swup.hooks.on("page:view", initPostEngagement);
+};
+
+if (window?.swup?.hooks) {
+	setupPostEngagement();
+} else {
+	document.addEventListener("swup:enable", setupPostEngagement, { once: true });
+}
+</script>
+
+<script>
 import PhotoSwipeLightbox from "photoswipe/lightbox"
 import "photoswipe/style.css"
 

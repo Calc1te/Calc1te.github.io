@@ -1,0 +1,61 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+	slug: string;
+}
+
+const { slug } = Astro.props;
+---
+
+<div
+	class="contents"
+	data-post-engagement
+	data-slug={slug}
+	aria-live="polite"
+>
+	<div class="flex flex-row items-center" title="阅读量按匿名访客每天最多统计一次">
+		<div class="transition h-6 w-6 rounded-md bg-black/5 dark:bg-white/10 text-black/50 dark:text-white/50 flex items-center justify-center mr-2">
+			<Icon name="material-symbols:visibility-outline-rounded" />
+		</div>
+		<div class="text-sm">
+			<span data-view-count>—</span>
+			<span> 次阅读</span>
+		</div>
+	</div>
+
+	<button
+		type="button"
+		class="group flex flex-row items-center transition hover:text-[var(--primary)] disabled:cursor-wait disabled:opacity-50"
+		data-like-button
+		aria-label="点赞"
+		aria-pressed="false"
+	>
+		<div class="transition h-6 w-6 rounded-md bg-black/5 dark:bg-white/10 text-black/50 dark:text-white/50 group-hover:text-[var(--primary)] flex items-center justify-center mr-2">
+			<Icon class="like-icon-outline" name="material-symbols:favorite-outline-rounded" />
+			<Icon class="like-icon-filled" name="material-symbols:favorite-rounded" />
+		</div>
+		<div class="text-sm">
+			<span data-like-count>—</span>
+			<span> 个喜欢</span>
+		</div>
+	</button>
+</div>
+
+<style>
+	[data-like-button] .like-icon-filled {
+		display: none;
+	}
+
+	[data-like-button][aria-pressed="true"] {
+		color: var(--primary);
+	}
+
+	[data-like-button][aria-pressed="true"] .like-icon-outline {
+		display: none;
+	}
+
+	[data-like-button][aria-pressed="true"] .like-icon-filled {
+		display: block;
+	}
+</style>

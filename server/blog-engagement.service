@@ -1,0 +1,24 @@
+[Unit]
+Description=View and like counter for blog.calciiite.icu
+After=network.target
+
+[Service]
+Type=simple
+User=blog-engagement
+Group=blog-engagement
+WorkingDirectory=/opt/blog-engagement
+Environment=BLOG_ENGAGEMENT_BIND=172.17.0.1
+Environment=BLOG_ENGAGEMENT_PORT=5006
+Environment=BLOG_ENGAGEMENT_DB=/var/lib/blog-engagement/engagement.sqlite3
+Environment=BLOG_ENGAGEMENT_ORIGIN=https://blog.calciiite.icu
+ExecStart=/usr/bin/python3 /opt/blog-engagement/blog_engagement.py
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadWritePaths=/var/lib/blog-engagement
+
+[Install]
+WantedBy=multi-user.target
